@@ -20,7 +20,6 @@ use Cake\Http\Cookie\Cookie;
 use Cake\Http\Cookie\CookieCollection;
 use Cake\Http\Cookie\CookieInterface;
 use Cake\Log\Log;
-use Cake\Network\CorsBuilder;
 use Cake\Network\Exception\NotFoundException;
 use DateTime;
 use DateTimeZone;
@@ -2337,7 +2336,7 @@ class Response implements ResponseInterface
      * @param string|array $allowedDomains List of allowed domains, see method description for more details
      * @param string|array $allowedMethods List of HTTP verbs allowed
      * @param string|array $allowedHeaders List of HTTP headers allowed
-     * @return \Cake\Network\CorsBuilder A builder object the provides a fluent interface for defining
+     * @return \Cake\Http\CorsBuilder A builder object the provides a fluent interface for defining
      *   additional CORS headers.
      */
     public function cors(ServerRequest $request, $allowedDomains = [], $allowedMethods = [], $allowedHeaders = [])
